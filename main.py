@@ -31,14 +31,14 @@ async def eventHandler(task_id : int):
     print(latest_bid[-1])
 
     for connection in subcribers:
-        if connection == event.task_id:
+        if connection == task_id:
             websocket = subcribers[connection]
             await websocket.send_json(latest_bid)
             return {"message" : "event received published succesfully"}
 
         else:
             # Handle the case where the client is disconnected
-            print(f"Client {event.task_id} is not connected.")
+            print(f"Client {task_id} is not connected.")
             return {"message" : "event received but not published"}
 
 
