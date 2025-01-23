@@ -4,8 +4,8 @@ import certifi
 from pymongo.mongo_client import MongoClient
 import urllib
 
-usernmae = urllib.parse.quote("goodghost340")
-passwd = urllib.parse.quote("riot@vky342")
+usernmae = urllib.parse.quote(".   ")
+passwd = urllib.parse.quote(".  ")
 
 uri = "mongodb+srv://%s:%s@bidreg.yl7ag.mongodb.net/?retryWrites=true&w=majority&appName=BidReg&ssl=true&ssl_cert_reqs=CERT_NONE" % (usernmae, passwd)
 
